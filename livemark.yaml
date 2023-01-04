@@ -1,0 +1,26 @@
+brand:
+  text: Dados Abertos UFPE
+site:
+  title: Global Title
+about:
+  text: Livemark is a Python static site generator
+pages:
+  items:
+    - name: Introdução
+      path: index
+    - name: Remark
+      path: pages/remark
+    - name: Gráficos
+      items:
+        - path: pages/graficos/grafico-1
+        - path: pages/graficos/grafico-2
+    - name: Blog
+      path: blog/index
+links:
+  items:
+    - name: Frictionless
+      path: https://frictionlessdata.io
+    - name: Discord
+      path: https://discord.com/channels/695635777199145130/695635777199145133
+    - name: Twitter
+      path: https://twitter.com/frictionlessd8a

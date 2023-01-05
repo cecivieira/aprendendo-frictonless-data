@@ -14,6 +14,9 @@ pages:
       items:
         - path: pages/graficos/grafico-1
         - path: pages/graficos/grafico-2
+    - name: Frictonless
+      items:
+        - path: pages/frictionless/exemplo-inicial
     - name: Blog
       path: blog/index
 links:

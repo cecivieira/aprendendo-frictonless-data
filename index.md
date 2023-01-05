@@ -8,15 +8,32 @@ It will be great here
 
 Python task
 
-```python task id=data-extract
+```python task id=data-e
 print('Data Extract')
 ```
-```python task id=data-transform
+```python task id=data-t
 print('Data Transform')
 ```
-```python task id=data-load
+```python task id=data-l
 print('Data Load')
 ```
+
+As tasks servem para determinar funcionalidades. Para rodar uma task é necessário inserir o seguinte trecho de código:
+
+```
+'''bash script
+$ livemark run NOME-TASK
+'''
+```
+
+Para listar todas as funcionalidades existentes, execute:
+
+```
+'''bash script
+$ livemark run
+'''
+```
+
 
 Python script
 

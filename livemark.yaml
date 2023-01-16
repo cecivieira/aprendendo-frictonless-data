@@ -17,6 +17,7 @@ pages:
     - name: Frictonless
       items:
         - path: pages/frictionless/exemplo-inicial
+        - path: pages/frictionless/exemplos-basicos
     - name: Blog
       path: blog/index
 links:

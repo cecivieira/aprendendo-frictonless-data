@@ -15,8 +15,8 @@ resource = describe('data/countries.csv')
 pprint(resource)
 ```
 
-## Insere novos metadados no schema e corrige tipo de dado
-<!-- ```python script
+<!-- ## Insere novos metadados no schema e corrige tipo de dado (ALTERAR PATH DO YAML PARA coutries.csv)
+```python script
 from frictionless import Detector, describe
 
 detectar = Detector(field_missing_values=["", "n/a"]) # informa quais os valores que o sistema deve interpretar como valor faltante
@@ -39,7 +39,7 @@ from pprint import pprint
 from frictionless import extract
 
 pasta = 'data'
-rows = extract('../data/countries.resource.yaml') #esse arquivo precisa estar na pasta raiz para que o método rode
+rows = extract(f'{pasta}/countries.resource.yaml') #caminho completo do arquivo
 pprint(rows)
 ```
 
@@ -48,7 +48,8 @@ pprint(rows)
 from pprint import pprint
 from frictionless import validate
 
-report = validate('countries.resource.yaml')
+pasta = 'data'
+report = validate(f'{pasta}/countries.resource.yaml') #caminho completo do arquivo
 pprint(report.flatten(["rowPosition", "fieldPosition", "code"]))
 ```
 
@@ -71,7 +72,8 @@ def clean(resource):
                     yield row
 
     # Meta
-    resource.schema = Resource("countries.resource.yaml").schema
+    pasta = 'data'
+    resource.schema = Resource(f'{pasta}/countries.resource.yaml').schema #caminho completo do arquivo
     resource.data = data
 
 source = describe("data/countries.csv")

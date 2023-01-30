@@ -55,39 +55,39 @@ pprint(report.flatten(["rowPosition", "fieldPosition", "code"]))
 
 # Transformar dados
 ```python script
-from frictionless import Resource, describe, transform, steps
+# from frictionless import Resource, describe, transform, steps
 
-def clean(resource):
-    current = resource.to_copy()
+# def clean(resource):
+#     current = resource.to_copy()
 
-    # Data
-    def data():
-        with current:
-            for row in current.row_stream:
-                if row["name"] == "France":
-                    row["population"] = 67
-                if row["name"] == "Germany":
-                    row["neighbor_id"] = 2
-                if row["name"]:
-                    yield row
+#     # Data
+#     def data():
+#         with current:
+#             for row in current.row_stream:
+#                 if row["name"] == "France":
+#                     row["population"] = 67
+#                 if row["name"] == "Germany":
+#                     row["neighbor_id"] = 2
+#                 if row["name"]:
+#                     yield row
 
-    # Meta
-    pasta = 'data'
-    resource.schema = Resource(f'{pasta}/countries.resource.yaml').schema #caminho completo do arquivo
-    resource.data = data
+#     # Meta
+#     pasta = 'data'
+#     resource.schema = Resource(f'{pasta}/countries.resource.yaml').schema #caminho completo do arquivo
+#     resource.data = data
 
-source = describe("data/countries.csv")
-target = transform(
-    source,
-    steps=[
-        clean,
-        steps.table_write(path="data/countries.csv"),
-    ],
-)
+# source = describe("data/countries.csv")
+# target = transform(
+#     source,
+#     steps=[
+#         clean,
+#         steps.table_write(path="data/countries.csv"),
+#     ],
+# )
 
-# Exibir o arquivo transformado
-with open('data/countries.csv') as file:
-    print(file.read())
+# # Exibir o arquivo transformado
+# with open('data/countries.csv') as file:
+#     print(file.read())
 ```
 
 ## Listar arquivos e metadados pertencentes ao conjunto de dados que acabamos o pré-processamento

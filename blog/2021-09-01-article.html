@@ -1791,17 +1791,29 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
           </li>
         <li class="primary group ">
       <a href="" class="primary">
-        Frictonless
+        Frictonless V4
       </a>
             <ul class="secondary">
                 <li class="secondary ">
-          <a href="../pages/frictionless/exemplo-inicial.html" class="secondary">
+          <a href="../pages/frictionless_v4/exemplo-inicial.html" class="secondary">
             Exemplo inicial
           </a>
         </li>
                 <li class="secondary ">
-          <a href="../pages/frictionless/exemplos-basicos.html" class="secondary">
+          <a href="../pages/frictionless_v4/exemplos-basicos.html" class="secondary">
             Exemplos básicos
+          </a>
+        </li>
+              </ul>
+          </li>
+        <li class="primary group ">
+      <a href="" class="primary">
+        Frictonless V5
+      </a>
+            <ul class="secondary">
+                <li class="secondary ">
+          <a href="../pages/frictionless_v5/exemplo-inicial.html" class="secondary">
+            Introdução
           </a>
         </li>
               </ul>
@@ -1817,7 +1829,7 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 <div id="livemark-main">
 <div id="livemark-notes">
       <a href="https://github.com/cecivieira/aprendendo-frictonless-data/edit/main/blog/2021-09-01-article.md" target="_blank">Edit page </a> in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
-    (2023-01-04 10:50)
+    (2022-12-16 10:35)
 </div>
 
 <h1>Título Blog</h1>
@@ -2208,17 +2220,23 @@ document.addEventListener("DOMContentLoaded", function () {
           'relpath': '../pages/graficos/grafico-2',
           'text': "# Gr\u00e1fico modificado ```yaml chart data: url: ../../data/cars.csv mark: circle selection: brush: type: interval encoding: x: type: quantitative field: kmpl scale: domain: [12,25] y: type: quantitative field: price scale: domain: [100,900] color: condition: selection: brush field: type type: nominal value: red size: type: quantitative field: bhp width: 500 height: 300 ``` ## Cap\u00edtulo secund\u00e1rio 1 jahajhjha ## Cap\u00edtulo secund\u00e1rio 2 gagagaga ### Cap\u00edtulo terci\u00e1rio 1 hfytydyf ### Cap\u00edtulo terci\u00e1rio 2 hfytydyf",
       },
-          'pages/frictionless/exemplo-inicial': {
+          'pages/frictionless_v4/exemplo-inicial': {
           'name': 'Exemplo inicial',
-          'path': 'pages/frictionless/exemplo-inicial',
-          'relpath': '../pages/frictionless/exemplo-inicial',
+          'path': 'pages/frictionless_v4/exemplo-inicial',
+          'relpath': '../pages/frictionless_v4/exemplo-inicial',
           'text': "# Exemplo inicial ## Abrir o arquivo ```python script with open(\u0027data/invalid.csv\u0027) as arquivo: print(arquivo.read()) ``` ## Descrever o arquivo ```python task id=data-describe from frictionless import describe resource = describe(\u0027data/invalid.csv\u0027) print(resource) ``` ```bash script livemark run data-describe ``` ## Extract ```python task id=data-extract from frictionless import extract from pprint import pprint rows = extract(\u0027data/invalid.csv\u0027) pprint(rows) ``` ```bash script livemark run data-extract ``` ## Validate ```python task id=data-validate from frictionless import validate from pprint import pprint report = validate(\u0027data/invalid.csv\u0027) flatten_2 = report.flatten([\"rowPosition\", \"fieldPosition\", \"code\"]) pprint(flatten_2) ``` ```bash script livemark run data-validate ```",
       },
-          'pages/frictionless/exemplos-basicos': {
+          'pages/frictionless_v4/exemplos-basicos': {
           'name': 'Exemplos básicos',
-          'path': 'pages/frictionless/exemplos-basicos',
-          'relpath': '../pages/frictionless/exemplos-basicos',
-          'text': "# Exemplos b\u00e1sicos ## Abrir arquivo ```python script with open(\u0027data/countries.csv\u0027) as paises: print(paises.read()) ``` ## Imprimir na tela o arquivo ```python script from pprint import pprint from frictionless import describe resource = describe(\u0027data/countries.csv\u0027) pprint(resource) ``` ## Insere novos metadados no schema e corrige tipo de dado ```python script from frictionless import Detector, describe # detectar = Detector(field_missing_values=[\"\", \"n/a\"]) # informa quais os valores que o sistema deve interpretar como valor faltante # resource = describe(\u0027data/countries.csv\u0027, detector=detectar) #aplica substitui\u00e7\u00e3o ao arquivo countries.csv # resource.schema.get_field(\"neighbor_id\").type=\"integer\" #modifica tipo de dado da coluna neighbor_id para inteiro # resource.schema.foreign_keys.append( # {\"fields\": [\"neighbor_id\"], \"reference\": {\"resource\": \"\", \"fields\": [\"id\"]}} # ) #cria v\u00ednculo entre colunas neighbor_id e id. Informando que neighbor_id \u00e9 chave estrangeira a qual sua refer\u00eancia \u00e9 a coluna id localizada no mesmo arquivo # resource.to_yaml(\"data/countries.resource.yaml\") print(resource.schema) ``` ```python script with open(\u0027data/countries.resource.yaml\u0027) as paises_yaml: print(paises_yaml.read()) ``` # Extrair dados usando os metadados corrigidos ```python script from pprint import pprint from frictionless import extract pasta = \u0027data\u0027 rows = extract(f\u0027{pasta}/countries.resource.yaml\u0027) #caminho completo do arquivo pprint(rows) ``` # Validar dados ```python script from pprint import pprint from frictionless import validate pasta = \u0027data\u0027 report = validate(f\u0027{pasta}/countries.resource.yaml\u0027) #caminho completo do arquivo pprint(report.flatten([\"rowPosition\", \"fieldPosition\", \"code\"])) ``` # Transformar dados ```python script from frictionless import Resource, describe, transform, steps def clean(resource): current = resource.to_copy() # Data def data(): with current: for row in current.row_stream: if row[\"name\"] == \"France\": row[\"population\"] = 67 if row[\"name\"] == \"Germany\": row[\"neighbor_id\"] = 2 if row[\"name\"]: yield row # Meta pasta = \u0027data\u0027 resource.schema = Resource(f\u0027{pasta}/countries.resource.yaml\u0027).schema #caminho completo do arquivo resource.data = data source = describe(\"data/countries.csv\") target = transform( source, steps=[ clean, steps.table_write(path=\"data/countries.csv\"), ], ) # Exibir o arquivo transformado with open(\u0027data/countries.csv\u0027) as file: print(file.read()) ``` ## Listar arquivos e metadados pertencentes ao conjunto de dados que acabamos o pr\u00e9-processamento Esse trecho de c\u00f3digo n\u00e3o est\u00e1 com o comportamento esperado. \u00c9 necess\u00e1rio ler a documenta\u00e7\u00e3o da biblioteca OS, identificar a fun\u00e7\u00e3o a qual aceite como argumento o caminho da pasta data e aplique na pasta o filtro desejado (nesse caso o filtro \u00e9 \"retornar todos os arquivos come\u00e7ados com countries.\"). ```python script import os pasta2 = \u0027data/\u0027 files = [f for f in os.listdir(pasta2) if os.path.isfile(f\u0027{pasta2}{f}\u0027) and f.startswith(\u0027countries.\u0027)] print(files) ```",
+          'path': 'pages/frictionless_v4/exemplos-basicos',
+          'relpath': '../pages/frictionless_v4/exemplos-basicos',
+          'text': "# Exemplos b\u00e1sicos ## Abrir arquivo ```python script with open(\u0027data/countries.csv\u0027) as paises: print(paises.read()) ``` ## Imprimir na tela o arquivo ```python script from pprint import pprint from frictionless import describe resource = describe(\u0027data/countries.csv\u0027) pprint(resource) ``` \u003c!-- ## Insere novos metadados no schema e corrige tipo de dado (ALTERAR PATH DO YAML PARA coutries.csv) ```python script from frictionless import Detector, describe detectar = Detector(field_missing_values=[\"\", \"n/a\"]) # informa quais os valores que o sistema deve interpretar como valor faltante resource = describe(\u0027data/countries.csv\u0027, detector=detectar) #aplica substitui\u00e7\u00e3o ao arquivo countries.csv resource.schema.get_field(\"neighbor_id\").type=\"integer\" #modifica tipo de dado da coluna neighbor_id para inteiro resource.schema.foreign_keys.append( {\"fields\": [\"neighbor_id\"], \"reference\": {\"resource\": \"\", \"fields\": [\"id\"]}} ) #cria v\u00ednculo entre colunas neighbor_id e id. Informando que neighbor_id \u00e9 chave estrangeira a qual sua refer\u00eancia \u00e9 a coluna id localizada no mesmo arquivo resource.to_yaml(\"data/countries.resource.yaml\") ``` --\u003e ```python script with open(\u0027data/countries.resource.yaml\u0027) as paises_yaml: print(paises_yaml.read()) ``` # Extrair dados usando os metadados corrigidos ```python script from pprint import pprint from frictionless import extract pasta = \u0027data\u0027 rows = extract(f\u0027{pasta}/countries.resource.yaml\u0027) #caminho completo do arquivo pprint(rows) ``` # Validar dados ```python script from pprint import pprint from frictionless import validate pasta = \u0027data\u0027 report = validate(f\u0027{pasta}/countries.resource.yaml\u0027) #caminho completo do arquivo pprint(report.flatten([\"rowPosition\", \"fieldPosition\", \"code\"])) ``` # Transformar dados ```python script # from frictionless import Resource, describe, transform, steps # def clean(resource): # current = resource.to_copy() # # Data # def data(): # with current: # for row in current.row_stream: # if row[\"name\"] == \"France\": # row[\"population\"] = 67 # if row[\"name\"] == \"Germany\": # row[\"neighbor_id\"] = 2 # if row[\"name\"]: # yield row # # Meta # pasta = \u0027data\u0027 # resource.schema = Resource(f\u0027{pasta}/countries.resource.yaml\u0027).schema #caminho completo do arquivo # resource.data = data # source = describe(\"data/countries.csv\") # target = transform( # source, # steps=[ # clean, # steps.table_write(path=\"data/countries.csv\"), # ], # ) # # Exibir o arquivo transformado # with open(\u0027data/countries.csv\u0027) as file: # print(file.read()) ``` ## Listar arquivos e metadados pertencentes ao conjunto de dados que acabamos o pr\u00e9-processamento Esse trecho de c\u00f3digo n\u00e3o est\u00e1 com o comportamento esperado. \u00c9 necess\u00e1rio ler a documenta\u00e7\u00e3o da biblioteca OS, identificar a fun\u00e7\u00e3o a qual aceite como argumento o caminho da pasta data e aplique na pasta o filtro desejado (nesse caso o filtro \u00e9 \"retornar todos os arquivos come\u00e7ados com countries.\"). ```python script import os pasta2 = \u0027data/\u0027 files = [f for f in os.listdir(pasta2) if os.path.isfile(f\u0027{pasta2}{f}\u0027) and f.startswith(\u0027countries.\u0027)] print(files) ```",
+      },
+          'pages/frictionless_v5/exemplo-inicial': {
+          'name': 'Introdução',
+          'path': 'pages/frictionless_v5/exemplo-inicial',
+          'relpath': '../pages/frictionless_v5/exemplo-inicial',
+          'text': "# Introdu\u00e7\u00e3o ```bash script frictionless validate data/invalid.csv ``` # Atualiza\u00e7\u00e3o de vers\u00e3o Para atualizar a vers\u00e3o do frictionless, rode o seguinte comando: \u0027\u0027\u0027 pip install --upgrade frictionless \u0027\u0027\u0027 # Uso \u003c!-- ```python script from frictionless import extract rows = extract(\u0027data/invalid.csv\u0027) ``` --\u003e",
       },
           'blog/index': {
           'name': 'Sumário',

@@ -14,10 +14,13 @@ pages:
       items:
         - path: pages/graficos/grafico-1
         - path: pages/graficos/grafico-2
-    - name: Frictonless
+    - name: Frictonless V4
       items:
-        - path: pages/frictionless/exemplo-inicial
-        - path: pages/frictionless/exemplos-basicos
+        - path: pages/frictionless_v4/exemplo-inicial
+        - path: pages/frictionless_v4/exemplos-basicos
+    - name: Frictonless V5
+      items:
+        - path: pages/frictionless_v5/exemplo-inicial
     - name: Blog
       path: blog/index
 links:

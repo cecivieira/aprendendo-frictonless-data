@@ -1,0 +1,46 @@
+title: Countries and their capitals
+description: The data was collected as a research project
+resources:
+  - name: capital
+    type: table
+    path: data/capital-3.csv
+    scheme: file
+    format: csv
+    encoding: utf-8
+    mediatype: text/csv
+    schema:
+      fields:
+        - name: id
+          type: integer
+        - name: name
+          type: string
+  - name: country
+    type: table
+    path: data/country-3.csv
+    scheme: file
+    format: csv
+    encoding: utf-8
+    mediatype: text/csv
+    schema:
+      fields:
+        - name: id
+          type: integer
+          title: Identifier
+        - name: capital_id
+          type: integer
+        - name: name
+          type: string
+          title: Name of the country
+        - name: population
+          type: integer
+          title: Population
+          description: According to the year 2020's data
+          constraints:
+            minimum: 0
+      foreignKeys:
+        - fields:
+            - capital_id
+          reference:
+            resource: capital
+            fields:
+              - id

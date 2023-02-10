@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="It will be great here">
-<meta name="keywords" content="my,project">
+<meta name="description" content="Para imprimir o relatório completo de validação, use apenas  pprint(relatorio_validacao .">
+<meta name="keywords" content="exemplos,básicos">
 <link rel="icon" href="None">
 <title>Global Title | Dados Abertos UFPE</title>
 <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
@@ -1366,29 +1366,60 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 </style>
 <style>
 
-#livemark-about {
+#livemark-topics {
   color: #888;
 }
 
-</style>
-<style>
-
-#livemark-links {
-  color: #888;
-}
-
-#livemark-links ul {
+#livemark-topics .toc>.toc-list {
   overflow: hidden;
   position: relative;
+}
+
+#livemark-topics .toc>.toc-list li {
+  list-style: none;
+}
+
+#livemark-topics .toc-list {
   padding-left: 0;
   margin: 0;
 }
 
-#livemark-links li {
-  list-style: none;
+#livemark-topics a.toc-link {
+  color: currentColor;
 }
 
-#livemark-links a {
+#livemark-topics a.toc-link:hover {
+  color: #80b2e6;
+}
+
+#livemark-topics .is-active-link {
+  font-weight: 700;
+}
+
+#livemark-topics ul.secondary {
+  margin-left: 20px;
+  display: none;
+}
+
+#livemark-topics li.is-active-li ul.secondary {
+  display: block;
+}
+
+#livemark-topics li.group a.primary::after {
+  content: "\f054";
+  font-size: 16px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 2px;
+  right: 0px;
+}
+
+#livemark-topics li.group.is-active-li a.primary::after {
+  content: "\f078";
+}
+
+#livemark-topics a {
   display: inline-block;
   color: currentColor;
   position: relative;
@@ -1398,23 +1429,7 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
   padding-bottom: 5px;
 }
 
-#livemark-links a:hover {
-  color: #80b2e6;
-}
-
-#livemark-links a[target="_blank"]:after {
-  content: "\f35d";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  vertical-align: text-top;
-  text-decoration: none;
-  display: inline-block;
-  color: #aaa;
-  font-size: 12px;
-  margin-left: -2px;
-}
-
-#livemark-links a[target="_blank"]:hover:after {
+#livemark-topics a:hover {
   color: #80b2e6;
 }
 
@@ -1738,7 +1753,7 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 <div id="livemark-brand">
   <ul>
     <li>
-      <a class="active" href=".">
+      <a class="active" href="../..">
         Dados Abertos UFPE
       </a>
     </li>
@@ -1747,13 +1762,13 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 
 <div id="livemark-pages">
   <ul class="primary">
-        <li class="primary  active">
-      <a href="index.html" class="primary">
+        <li class="primary  ">
+      <a href="../../index.html" class="primary">
         Introdução
       </a>
           </li>
         <li class="primary  ">
-      <a href="pages/remark.html" class="primary">
+      <a href="../remark.html" class="primary">
         Remark
       </a>
           </li>
@@ -1763,12 +1778,12 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
       </a>
             <ul class="secondary">
                 <li class="secondary ">
-          <a href="pages/graficos/grafico-1.html" class="secondary">
+          <a href="../graficos/grafico-1.html" class="secondary">
             Gráfico padrão
           </a>
         </li>
                 <li class="secondary ">
-          <a href="pages/graficos/grafico-2.html" class="secondary">
+          <a href="../graficos/grafico-2.html" class="secondary">
             Gráfico modificado
           </a>
         </li>
@@ -1780,46 +1795,46 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
       </a>
             <ul class="secondary">
                 <li class="secondary ">
-          <a href="pages/frictionless_v4/exemplo-inicial.html" class="secondary">
+          <a href="../frictionless_v4/exemplo-inicial.html" class="secondary">
             Exemplo inicial
           </a>
         </li>
                 <li class="secondary ">
-          <a href="pages/frictionless_v4/exemplos-basicos.html" class="secondary">
+          <a href="../frictionless_v4/exemplos-basicos.html" class="secondary">
             Exemplos básicos
           </a>
         </li>
               </ul>
           </li>
-        <li class="primary group ">
+        <li class="primary group active">
       <a href="" class="primary">
         Frictonless V5
       </a>
             <ul class="secondary">
                 <li class="secondary ">
-          <a href="pages/frictionless_v5/exemplo-inicial.html" class="secondary">
+          <a href="exemplo-inicial.html" class="secondary">
             Introdução
           </a>
         </li>
-                <li class="secondary ">
-          <a href="pages/frictionless_v5/exemplo-basico.html" class="secondary">
+                <li class="secondary active">
+          <a href="exemplo-basico.html" class="secondary">
             Exemplos básicos 
           </a>
         </li>
                 <li class="secondary ">
-          <a href="pages/frictionless_v5/describe.html" class="secondary">
+          <a href="describe.html" class="secondary">
             Descrever arquivo
           </a>
         </li>
                 <li class="secondary ">
-          <a href="pages/frictionless_v5/validate.html" class="secondary">
+          <a href="validate.html" class="secondary">
             Validating
           </a>
         </li>
               </ul>
           </li>
         <li class="primary  ">
-      <a href="blog/index.html" class="primary">
+      <a href="../../blog/index.html" class="primary">
         Blog
       </a>
           </li>
@@ -1828,1094 +1843,171 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 </div>
 <div id="livemark-main">
 <div id="livemark-notes">
-      <a href="https://github.com/cecivieira/aprendendo-frictonless-data/edit/main/index.md" target="_blank">Edit page </a> in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
-    (2023-01-19 10:11)
+      <a href="https://github.com/cecivieira/aprendendo-frictonless-data/edit/main/pages/frictionless_v5/exemplo-basico.md" target="_blank">Edit page </a> in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
+    (2023-02-02 10:25)
 </div>
 
-<h1>My Project</h1>
-<p>It will be great here</p>
-<div><i class="fas fa-heart"></i>
-</div><p>Python task</p>
-<div data-id="data-e"><div class="livemark-task"><pre><code class="language-bash">$ livemark run data-e</code></pre>
-
-<pre><code class="language-python">print('Data Extract')
-</code></pre>
-</div></div><div data-id="data-t"><div class="livemark-task"><pre><code class="language-bash">$ livemark run data-t</code></pre>
-
-<pre><code class="language-python">print('Data Transform')
-</code></pre>
-</div></div><div data-id="data-l"><div class="livemark-task"><pre><code class="language-bash">$ livemark run data-l</code></pre>
-
-<pre><code class="language-python">print('Data Load')
-</code></pre>
-</div></div><p>As tasks servem para determinar funcionalidades. Para rodar uma task é necessário inserir o seguinte trecho de código:</p>
-<div><pre><code>'''bash script
-$ livemark run NOME-TASK
-'''
-</code></pre>
-</div><p>Para listar todas as funcionalidades existentes, execute:</p>
-<div><pre><code>'''bash script
-$ livemark run
-'''
-</code></pre>
-</div><p>Python script</p>
-<div><pre><code class="language-python">print("Hello World")
+<h1>Exemplos básicos</h1>
+<p>(<a href="https://framework.frictionlessdata.io/docs/basic-examples.html">link para capítulo do Manual</a>)</p>
+<ul>
+<li>Abrir arquivo</li>
+</ul>
+<div><pre><code class="language-python">with open('data/countries.csv') as arquivo:
+    print(arquivo.read())
 </code></pre>
 
-<pre><code class="language-markup">Hello World</code></pre>
-</div><hr>
-<div><div class="livemark-chart" style="overflow-x: auto">
-  <div id="livemark-chart-1">
-  </div>
-</div>
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-  vegaEmbed('#livemark-chart-1', JSON.parse('{"data": {"url": "data/cars.csv"}, "mark": "circle", "selection": {"brush": {"type": "interval"}}, "encoding": {"x": {"type": "quantitative", "field": "kmpl", "scale": {"domain": [12, 25]}}, "y": {"type": "quantitative", "field": "price", "scale": {"domain": [100, 900]}}, "color": {"condition": {"selection": "brush", "field": "type", "type": "nominal"}, "value": "grey"}, "size": {"type": "quantitative", "field": "bhp"}}, "width": 500, "height": 300}'))
-})
-</script>
+<pre><code class="language-markup"># clean this data!
+id,neighbor_id,name,population
+1,Ireland,Britain,67
+2,3,France,n/a,find the population
+3,22,Germany,83
+4,,Italy,60
+5</code></pre>
+</div><ul>
+<li>Descrever o arquivo (descrição automática)</li>
+</ul>
+<div><pre><code class="language-python">from pprint import pprint
+from frictionless import describe
 
-</div><h2>Tipos possíveis de remark</h2>
-<div data-type="info"><div class="livemark-remark">
-  <div class="alert alert-info" role="alert">
-    Remark tipo info
-  </div>
-</div></div><div data-type="danger"><div class="livemark-remark">
-  <div class="alert alert-danger" role="alert">
-    Remark tipo danger
-  </div>
-</div></div><div data-type="success"><div class="livemark-remark">
-  <div class="alert alert-success" role="alert">
-    Remark tipo success
-  </div>
-</div></div><div data-type="warning"><div class="livemark-remark">
-  <div class="alert alert-warning" role="alert">
-    Remark tipo warning
-  </div>
-</div></div><h2>Scroll infinito</h2>
-<div><div class="livemark-infinity">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
-    <div>7</div>
-    <div>8</div>
-    <div>9</div>
-  </div>
-</div><h2>Paginação</h2>
-<div><div class="livemark-pagination">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
-    <div>7</div>
-    <div>8</div>
-    <div>9</div>
-    <div>10</div>
-    <div>11</div>
-    <div>12</div>
-    <div>13</div>
-    <div>14</div>
-    <div>15</div>
-    <div>16</div>
-    <div>17</div>
-    <div>18</div>
-    <div>19</div>
-    <div>20</div>
-    <div>21</div>
-    <div>22</div>
-    <div>23</div>
-    <div>24</div>
-    <div>25</div>
-    <div>26</div>
-    <div>27</div>
-    <div>28</div>
-    <div>29</div>
-    <div>30</div>
-    <div>31</div>
-    <div>32</div>
-    <div>33</div>
-    <div>34</div>
-    <div>35</div>
-    <div>36</div>
-    <div>37</div>
-    <div>38</div>
-    <div>39</div>
-    <div>40</div>
-    <div>41</div>
-    <div>42</div>
-    <div>43</div>
-    <div>44</div>
-    <div>45</div>
-    <div>46</div>
-    <div>47</div>
-    <div>48</div>
-    <div>49</div>
-    <div>50</div>
-    <div>51</div>
-    <div>52</div>
-    <div>53</div>
-    <div>54</div>
-    <div>55</div>
-    <div>56</div>
-    <div>57</div>
-    <div>58</div>
-    <div>59</div>
-    <div>60</div>
-    <div>61</div>
-    <div>62</div>
-    <div>63</div>
-    <div>64</div>
-    <div>65</div>
-    <div>66</div>
-    <div>67</div>
-    <div>68</div>
-    <div>69</div>
-    <div>70</div>
-    <div>71</div>
-    <div>72</div>
-    <div>73</div>
-    <div>74</div>
-    <div>75</div>
-    <div>76</div>
-    <div>77</div>
-    <div>78</div>
-    <div>79</div>
-    <div>80</div>
-    <div>81</div>
-    <div>82</div>
-    <div>83</div>
-    <div>84</div>
-    <div>85</div>
-    <div>86</div>
-    <div>87</div>
-    <div>88</div>
-    <div>89</div>
-    <div>90</div>
-    <div>91</div>
-    <div>92</div>
-    <div>93</div>
-    <div>94</div>
-    <div>95</div>
-    <div>96</div>
-    <div>97</div>
-    <div>98</div>
-    <div>99</div>
-    <div>100</div>
-    <div>101</div>
-    <div>102</div>
-    <div>103</div>
-    <div>104</div>
-    <div>105</div>
-    <div>106</div>
-    <div>107</div>
-    <div>108</div>
-    <div>109</div>
-    <div>110</div>
-    <div>111</div>
-    <div>112</div>
-    <div>113</div>
-    <div>114</div>
-    <div>115</div>
-    <div>116</div>
-    <div>117</div>
-    <div>118</div>
-    <div>119</div>
-    <div>120</div>
-    <div>121</div>
-    <div>122</div>
-    <div>123</div>
-    <div>124</div>
-    <div>125</div>
-    <div>126</div>
-    <div>127</div>
-    <div>128</div>
-    <div>129</div>
-    <div>130</div>
-    <div>131</div>
-    <div>132</div>
-    <div>133</div>
-    <div>134</div>
-    <div>135</div>
-    <div>136</div>
-    <div>137</div>
-    <div>138</div>
-    <div>139</div>
-    <div>140</div>
-    <div>141</div>
-    <div>142</div>
-    <div>143</div>
-    <div>144</div>
-    <div>145</div>
-    <div>146</div>
-    <div>147</div>
-    <div>148</div>
-    <div>149</div>
-    <div>150</div>
-    <div>151</div>
-    <div>152</div>
-    <div>153</div>
-    <div>154</div>
-    <div>155</div>
-    <div>156</div>
-    <div>157</div>
-    <div>158</div>
-    <div>159</div>
-    <div>160</div>
-    <div>161</div>
-    <div>162</div>
-    <div>163</div>
-    <div>164</div>
-    <div>165</div>
-    <div>166</div>
-    <div>167</div>
-    <div>168</div>
-    <div>169</div>
-    <div>170</div>
-    <div>171</div>
-    <div>172</div>
-    <div>173</div>
-    <div>174</div>
-    <div>175</div>
-    <div>176</div>
-    <div>177</div>
-    <div>178</div>
-    <div>179</div>
-    <div>180</div>
-    <div>181</div>
-    <div>182</div>
-    <div>183</div>
-    <div>184</div>
-    <div>185</div>
-    <div>186</div>
-    <div>187</div>
-    <div>188</div>
-    <div>189</div>
-    <div>190</div>
-    <div>191</div>
-    <div>192</div>
-    <div>193</div>
-    <div>194</div>
-    <div>195</div>
-    <div>196</div>
-    <div>197</div>
-    <div>198</div>
-    <div>199</div>
-    <div>200</div>
-    <div>201</div>
-    <div>202</div>
-    <div>203</div>
-    <div>204</div>
-    <div>205</div>
-    <div>206</div>
-    <div>207</div>
-    <div>208</div>
-    <div>209</div>
-    <div>210</div>
-    <div>211</div>
-    <div>212</div>
-    <div>213</div>
-    <div>214</div>
-    <div>215</div>
-    <div>216</div>
-    <div>217</div>
-    <div>218</div>
-    <div>219</div>
-    <div>220</div>
-    <div>221</div>
-    <div>222</div>
-    <div>223</div>
-    <div>224</div>
-    <div>225</div>
-    <div>226</div>
-    <div>227</div>
-    <div>228</div>
-    <div>229</div>
-    <div>230</div>
-    <div>231</div>
-    <div>232</div>
-    <div>233</div>
-    <div>234</div>
-    <div>235</div>
-    <div>236</div>
-    <div>237</div>
-    <div>238</div>
-    <div>239</div>
-    <div>240</div>
-    <div>241</div>
-    <div>242</div>
-    <div>243</div>
-    <div>244</div>
-    <div>245</div>
-    <div>246</div>
-    <div>247</div>
-    <div>248</div>
-    <div>249</div>
-    <div>250</div>
-    <div>251</div>
-    <div>252</div>
-    <div>253</div>
-    <div>254</div>
-    <div>255</div>
-    <div>256</div>
-    <div>257</div>
-    <div>258</div>
-    <div>259</div>
-    <div>260</div>
-    <div>261</div>
-    <div>262</div>
-    <div>263</div>
-    <div>264</div>
-    <div>265</div>
-    <div>266</div>
-    <div>267</div>
-    <div>268</div>
-    <div>269</div>
-    <div>270</div>
-    <div>271</div>
-    <div>272</div>
-    <div>273</div>
-    <div>274</div>
-    <div>275</div>
-    <div>276</div>
-    <div>277</div>
-    <div>278</div>
-    <div>279</div>
-    <div>280</div>
-    <div>281</div>
-    <div>282</div>
-    <div>283</div>
-    <div>284</div>
-    <div>285</div>
-    <div>286</div>
-    <div>287</div>
-    <div>288</div>
-    <div>289</div>
-    <div>290</div>
-    <div>291</div>
-    <div>292</div>
-    <div>293</div>
-    <div>294</div>
-    <div>295</div>
-    <div>296</div>
-    <div>297</div>
-    <div>298</div>
-    <div>299</div>
-    <div>300</div>
-    <div>301</div>
-    <div>302</div>
-    <div>303</div>
-    <div>304</div>
-    <div>305</div>
-    <div>306</div>
-    <div>307</div>
-    <div>308</div>
-    <div>309</div>
-    <div>310</div>
-    <div>311</div>
-    <div>312</div>
-    <div>313</div>
-    <div>314</div>
-    <div>315</div>
-    <div>316</div>
-    <div>317</div>
-    <div>318</div>
-    <div>319</div>
-    <div>320</div>
-    <div>321</div>
-    <div>322</div>
-    <div>323</div>
-    <div>324</div>
-    <div>325</div>
-    <div>326</div>
-    <div>327</div>
-    <div>328</div>
-    <div>329</div>
-    <div>330</div>
-    <div>331</div>
-    <div>332</div>
-    <div>333</div>
-    <div>334</div>
-    <div>335</div>
-    <div>336</div>
-    <div>337</div>
-    <div>338</div>
-    <div>339</div>
-    <div>340</div>
-    <div>341</div>
-    <div>342</div>
-    <div>343</div>
-    <div>344</div>
-    <div>345</div>
-    <div>346</div>
-    <div>347</div>
-    <div>348</div>
-    <div>349</div>
-    <div>350</div>
-    <div>351</div>
-    <div>352</div>
-    <div>353</div>
-    <div>354</div>
-    <div>355</div>
-    <div>356</div>
-    <div>357</div>
-    <div>358</div>
-    <div>359</div>
-    <div>360</div>
-    <div>361</div>
-    <div>362</div>
-    <div>363</div>
-    <div>364</div>
-    <div>365</div>
-    <div>366</div>
-    <div>367</div>
-    <div>368</div>
-    <div>369</div>
-    <div>370</div>
-    <div>371</div>
-    <div>372</div>
-    <div>373</div>
-    <div>374</div>
-    <div>375</div>
-    <div>376</div>
-    <div>377</div>
-    <div>378</div>
-    <div>379</div>
-    <div>380</div>
-    <div>381</div>
-    <div>382</div>
-    <div>383</div>
-    <div>384</div>
-    <div>385</div>
-    <div>386</div>
-    <div>387</div>
-    <div>388</div>
-    <div>389</div>
-    <div>390</div>
-    <div>391</div>
-    <div>392</div>
-    <div>393</div>
-    <div>394</div>
-    <div>395</div>
-    <div>396</div>
-    <div>397</div>
-    <div>398</div>
-    <div>399</div>
-    <div>400</div>
-    <div>401</div>
-    <div>402</div>
-    <div>403</div>
-    <div>404</div>
-    <div>405</div>
-    <div>406</div>
-    <div>407</div>
-    <div>408</div>
-    <div>409</div>
-    <div>410</div>
-    <div>411</div>
-    <div>412</div>
-    <div>413</div>
-    <div>414</div>
-    <div>415</div>
-    <div>416</div>
-    <div>417</div>
-    <div>418</div>
-    <div>419</div>
-    <div>420</div>
-    <div>421</div>
-    <div>422</div>
-    <div>423</div>
-    <div>424</div>
-    <div>425</div>
-    <div>426</div>
-    <div>427</div>
-    <div>428</div>
-    <div>429</div>
-    <div>430</div>
-    <div>431</div>
-    <div>432</div>
-    <div>433</div>
-    <div>434</div>
-    <div>435</div>
-    <div>436</div>
-    <div>437</div>
-    <div>438</div>
-    <div>439</div>
-    <div>440</div>
-    <div>441</div>
-    <div>442</div>
-    <div>443</div>
-    <div>444</div>
-    <div>445</div>
-    <div>446</div>
-    <div>447</div>
-    <div>448</div>
-    <div>449</div>
-    <div>450</div>
-    <div>451</div>
-    <div>452</div>
-    <div>453</div>
-    <div>454</div>
-    <div>455</div>
-    <div>456</div>
-    <div>457</div>
-    <div>458</div>
-    <div>459</div>
-    <div>460</div>
-    <div>461</div>
-    <div>462</div>
-    <div>463</div>
-    <div>464</div>
-    <div>465</div>
-    <div>466</div>
-    <div>467</div>
-    <div>468</div>
-    <div>469</div>
-    <div>470</div>
-    <div>471</div>
-    <div>472</div>
-    <div>473</div>
-    <div>474</div>
-    <div>475</div>
-    <div>476</div>
-    <div>477</div>
-    <div>478</div>
-    <div>479</div>
-    <div>480</div>
-    <div>481</div>
-    <div>482</div>
-    <div>483</div>
-    <div>484</div>
-    <div>485</div>
-    <div>486</div>
-    <div>487</div>
-    <div>488</div>
-    <div>489</div>
-    <div>490</div>
-    <div>491</div>
-    <div>492</div>
-    <div>493</div>
-    <div>494</div>
-    <div>495</div>
-    <div>496</div>
-    <div>497</div>
-    <div>498</div>
-    <div>499</div>
-    <div>500</div>
-    <div>501</div>
-    <div>502</div>
-    <div>503</div>
-    <div>504</div>
-    <div>505</div>
-    <div>506</div>
-    <div>507</div>
-    <div>508</div>
-    <div>509</div>
-    <div>510</div>
-    <div>511</div>
-    <div>512</div>
-    <div>513</div>
-    <div>514</div>
-    <div>515</div>
-    <div>516</div>
-    <div>517</div>
-    <div>518</div>
-    <div>519</div>
-    <div>520</div>
-    <div>521</div>
-    <div>522</div>
-    <div>523</div>
-    <div>524</div>
-    <div>525</div>
-    <div>526</div>
-    <div>527</div>
-    <div>528</div>
-    <div>529</div>
-    <div>530</div>
-    <div>531</div>
-    <div>532</div>
-    <div>533</div>
-    <div>534</div>
-    <div>535</div>
-    <div>536</div>
-    <div>537</div>
-    <div>538</div>
-    <div>539</div>
-    <div>540</div>
-    <div>541</div>
-    <div>542</div>
-    <div>543</div>
-    <div>544</div>
-    <div>545</div>
-    <div>546</div>
-    <div>547</div>
-    <div>548</div>
-    <div>549</div>
-    <div>550</div>
-    <div>551</div>
-    <div>552</div>
-    <div>553</div>
-    <div>554</div>
-    <div>555</div>
-    <div>556</div>
-    <div>557</div>
-    <div>558</div>
-    <div>559</div>
-    <div>560</div>
-    <div>561</div>
-    <div>562</div>
-    <div>563</div>
-    <div>564</div>
-    <div>565</div>
-    <div>566</div>
-    <div>567</div>
-    <div>568</div>
-    <div>569</div>
-    <div>570</div>
-    <div>571</div>
-    <div>572</div>
-    <div>573</div>
-    <div>574</div>
-    <div>575</div>
-    <div>576</div>
-    <div>577</div>
-    <div>578</div>
-    <div>579</div>
-    <div>580</div>
-    <div>581</div>
-    <div>582</div>
-    <div>583</div>
-    <div>584</div>
-    <div>585</div>
-    <div>586</div>
-    <div>587</div>
-    <div>588</div>
-    <div>589</div>
-    <div>590</div>
-    <div>591</div>
-    <div>592</div>
-    <div>593</div>
-    <div>594</div>
-    <div>595</div>
-    <div>596</div>
-    <div>597</div>
-    <div>598</div>
-    <div>599</div>
-    <div>600</div>
-    <div>601</div>
-    <div>602</div>
-    <div>603</div>
-    <div>604</div>
-    <div>605</div>
-    <div>606</div>
-    <div>607</div>
-    <div>608</div>
-    <div>609</div>
-    <div>610</div>
-    <div>611</div>
-    <div>612</div>
-    <div>613</div>
-    <div>614</div>
-    <div>615</div>
-    <div>616</div>
-    <div>617</div>
-    <div>618</div>
-    <div>619</div>
-    <div>620</div>
-    <div>621</div>
-    <div>622</div>
-    <div>623</div>
-    <div>624</div>
-    <div>625</div>
-    <div>626</div>
-    <div>627</div>
-    <div>628</div>
-    <div>629</div>
-    <div>630</div>
-    <div>631</div>
-    <div>632</div>
-    <div>633</div>
-    <div>634</div>
-    <div>635</div>
-    <div>636</div>
-    <div>637</div>
-    <div>638</div>
-    <div>639</div>
-    <div>640</div>
-    <div>641</div>
-    <div>642</div>
-    <div>643</div>
-    <div>644</div>
-    <div>645</div>
-    <div>646</div>
-    <div>647</div>
-    <div>648</div>
-    <div>649</div>
-    <div>650</div>
-    <div>651</div>
-    <div>652</div>
-    <div>653</div>
-    <div>654</div>
-    <div>655</div>
-    <div>656</div>
-    <div>657</div>
-    <div>658</div>
-    <div>659</div>
-    <div>660</div>
-    <div>661</div>
-    <div>662</div>
-    <div>663</div>
-    <div>664</div>
-    <div>665</div>
-    <div>666</div>
-    <div>667</div>
-    <div>668</div>
-    <div>669</div>
-    <div>670</div>
-    <div>671</div>
-    <div>672</div>
-    <div>673</div>
-    <div>674</div>
-    <div>675</div>
-    <div>676</div>
-    <div>677</div>
-    <div>678</div>
-    <div>679</div>
-    <div>680</div>
-    <div>681</div>
-    <div>682</div>
-    <div>683</div>
-    <div>684</div>
-    <div>685</div>
-    <div>686</div>
-    <div>687</div>
-    <div>688</div>
-    <div>689</div>
-    <div>690</div>
-    <div>691</div>
-    <div>692</div>
-    <div>693</div>
-    <div>694</div>
-    <div>695</div>
-    <div>696</div>
-    <div>697</div>
-    <div>698</div>
-    <div>699</div>
-    <div>700</div>
-    <div>701</div>
-    <div>702</div>
-    <div>703</div>
-    <div>704</div>
-    <div>705</div>
-    <div>706</div>
-    <div>707</div>
-    <div>708</div>
-    <div>709</div>
-    <div>710</div>
-    <div>711</div>
-    <div>712</div>
-    <div>713</div>
-    <div>714</div>
-    <div>715</div>
-    <div>716</div>
-    <div>717</div>
-    <div>718</div>
-    <div>719</div>
-    <div>720</div>
-    <div>721</div>
-    <div>722</div>
-    <div>723</div>
-    <div>724</div>
-    <div>725</div>
-    <div>726</div>
-    <div>727</div>
-    <div>728</div>
-    <div>729</div>
-    <div>730</div>
-    <div>731</div>
-    <div>732</div>
-    <div>733</div>
-    <div>734</div>
-    <div>735</div>
-    <div>736</div>
-    <div>737</div>
-    <div>738</div>
-    <div>739</div>
-    <div>740</div>
-    <div>741</div>
-    <div>742</div>
-    <div>743</div>
-    <div>744</div>
-    <div>745</div>
-    <div>746</div>
-    <div>747</div>
-    <div>748</div>
-    <div>749</div>
-    <div>750</div>
-    <div>751</div>
-    <div>752</div>
-    <div>753</div>
-    <div>754</div>
-    <div>755</div>
-    <div>756</div>
-    <div>757</div>
-    <div>758</div>
-    <div>759</div>
-    <div>760</div>
-    <div>761</div>
-    <div>762</div>
-    <div>763</div>
-    <div>764</div>
-    <div>765</div>
-    <div>766</div>
-    <div>767</div>
-    <div>768</div>
-    <div>769</div>
-    <div>770</div>
-    <div>771</div>
-    <div>772</div>
-    <div>773</div>
-    <div>774</div>
-    <div>775</div>
-    <div>776</div>
-    <div>777</div>
-    <div>778</div>
-    <div>779</div>
-    <div>780</div>
-    <div>781</div>
-    <div>782</div>
-    <div>783</div>
-    <div>784</div>
-    <div>785</div>
-    <div>786</div>
-    <div>787</div>
-    <div>788</div>
-    <div>789</div>
-    <div>790</div>
-    <div>791</div>
-    <div>792</div>
-    <div>793</div>
-    <div>794</div>
-    <div>795</div>
-    <div>796</div>
-    <div>797</div>
-    <div>798</div>
-    <div>799</div>
-    <div>800</div>
-    <div>801</div>
-    <div>802</div>
-    <div>803</div>
-    <div>804</div>
-    <div>805</div>
-    <div>806</div>
-    <div>807</div>
-    <div>808</div>
-    <div>809</div>
-    <div>810</div>
-    <div>811</div>
-    <div>812</div>
-    <div>813</div>
-    <div>814</div>
-    <div>815</div>
-    <div>816</div>
-    <div>817</div>
-    <div>818</div>
-    <div>819</div>
-    <div>820</div>
-    <div>821</div>
-    <div>822</div>
-    <div>823</div>
-    <div>824</div>
-    <div>825</div>
-    <div>826</div>
-    <div>827</div>
-    <div>828</div>
-    <div>829</div>
-    <div>830</div>
-    <div>831</div>
-    <div>832</div>
-    <div>833</div>
-    <div>834</div>
-    <div>835</div>
-    <div>836</div>
-    <div>837</div>
-    <div>838</div>
-    <div>839</div>
-    <div>840</div>
-    <div>841</div>
-    <div>842</div>
-    <div>843</div>
-    <div>844</div>
-    <div>845</div>
-    <div>846</div>
-    <div>847</div>
-    <div>848</div>
-    <div>849</div>
-    <div>850</div>
-    <div>851</div>
-    <div>852</div>
-    <div>853</div>
-    <div>854</div>
-    <div>855</div>
-    <div>856</div>
-    <div>857</div>
-    <div>858</div>
-    <div>859</div>
-    <div>860</div>
-    <div>861</div>
-    <div>862</div>
-    <div>863</div>
-    <div>864</div>
-    <div>865</div>
-    <div>866</div>
-    <div>867</div>
-    <div>868</div>
-    <div>869</div>
-    <div>870</div>
-    <div>871</div>
-    <div>872</div>
-    <div>873</div>
-    <div>874</div>
-    <div>875</div>
-    <div>876</div>
-    <div>877</div>
-    <div>878</div>
-    <div>879</div>
-    <div>880</div>
-    <div>881</div>
-    <div>882</div>
-    <div>883</div>
-    <div>884</div>
-    <div>885</div>
-    <div>886</div>
-    <div>887</div>
-    <div>888</div>
-    <div>889</div>
-    <div>890</div>
-    <div>891</div>
-    <div>892</div>
-    <div>893</div>
-    <div>894</div>
-    <div>895</div>
-    <div>896</div>
-    <div>897</div>
-    <div>898</div>
-    <div>899</div>
-    <div>900</div>
-    <div>901</div>
-    <div>902</div>
-    <div>903</div>
-    <div>904</div>
-    <div>905</div>
-    <div>906</div>
-    <div>907</div>
-    <div>908</div>
-    <div>909</div>
-    <div>910</div>
-    <div>911</div>
-    <div>912</div>
-    <div>913</div>
-    <div>914</div>
-    <div>915</div>
-    <div>916</div>
-    <div>917</div>
-    <div>918</div>
-    <div>919</div>
-    <div>920</div>
-    <div>921</div>
-    <div>922</div>
-    <div>923</div>
-    <div>924</div>
-    <div>925</div>
-    <div>926</div>
-    <div>927</div>
-    <div>928</div>
-    <div>929</div>
-    <div>930</div>
-    <div>931</div>
-    <div>932</div>
-    <div>933</div>
-    <div>934</div>
-    <div>935</div>
-    <div>936</div>
-    <div>937</div>
-    <div>938</div>
-    <div>939</div>
-    <div>940</div>
-    <div>941</div>
-    <div>942</div>
-    <div>943</div>
-    <div>944</div>
-    <div>945</div>
-    <div>946</div>
-    <div>947</div>
-    <div>948</div>
-    <div>949</div>
-    <div>950</div>
-    <div>951</div>
-    <div>952</div>
-    <div>953</div>
-    <div>954</div>
-    <div>955</div>
-    <div>956</div>
-    <div>957</div>
-    <div>958</div>
-    <div>959</div>
-    <div>960</div>
-    <div>961</div>
-    <div>962</div>
-    <div>963</div>
-    <div>964</div>
-    <div>965</div>
-    <div>966</div>
-    <div>967</div>
-    <div>968</div>
-    <div>969</div>
-    <div>970</div>
-    <div>971</div>
-    <div>972</div>
-    <div>973</div>
-    <div>974</div>
-    <div>975</div>
-    <div>976</div>
-    <div>977</div>
-    <div>978</div>
-    <div>979</div>
-    <div>980</div>
-    <div>981</div>
-    <div>982</div>
-    <div>983</div>
-    <div>984</div>
-    <div>985</div>
-    <div>986</div>
-    <div>987</div>
-    <div>988</div>
-    <div>989</div>
-    <div>990</div>
-    <div>991</div>
-    <div>992</div>
-    <div>993</div>
-    <div>994</div>
-    <div>995</div>
-    <div>996</div>
-    <div>997</div>
-    <div>998</div>
-    <div>999</div>
-    <div>1000</div>
-  </div>
+recurso = describe('data/countries.csv')
+pprint(recurso)
+
+</code></pre>
+
+<pre><code class="language-markup">{'name': 'countries',
+ 'type': 'table',
+ 'path': 'data/countries.csv',
+ 'scheme': 'file',
+ 'format': 'csv',
+ 'encoding': 'utf-8',
+ 'mediatype': 'text/csv',
+ 'dialect': {'headerRows': [2]},
+ 'schema': {'fields': [{'name': 'id', 'type': 'integer'},
+                       {'name': 'neighbor_id', 'type': 'string'},
+                       {'name': 'name', 'type': 'string'},
+                       {'name': 'population', 'type': 'string'}]}}</code></pre>
+</div><ul>
+<li>Atualizar metadados do arquivo</li>
+</ul>
+<div><pre><code class="language-python">from frictionless import Detector, describe
+
+deteccao_valor_ausentes = Detector(field_missing_values = ['', 'n/a'])
+recurso = describe('data/countries.csv', detector=deteccao_valor_ausentes)
+recurso.schema.get_field('neighbor_id').type = 'integer'
+recurso.schema.foreign_keys.append(
+    {"fields": ["neighbor_id"], "reference": {"resource": "", "fields": ["id"]}}
+)
+recurso.path = 'countries.csv' # corrige path do arquivo csv. Originalmente é gerado um path do caminho relativo à pasta raiz. A alteração é necessária porque quando o arquivo de metadados e dados estão na mesma pasta, o caminho deveria ser relativo à pasta atual.
+recurso.to_yaml('data/countries_v5.resource.yaml')
+</code></pre>
+</div><div><pre><code class="language-python">with open('data/countries_v5.resource.yaml') as arquivo:
+    print(arquivo.read())
+</code></pre>
+
+<pre><code class="language-markup">name: countries
+type: table
+path: countries.csv
+scheme: file
+format: csv
+encoding: utf-8
+mediatype: text/csv
+dialect:
+  headerRows:
+    - 2
+schema:
+  fields:
+    - name: id
+      type: integer
+    - name: neighbor_id
+      type: integer
+    - name: name
+      type: string
+    - name: population
+      type: integer
+  missingValues:
+    - ''
+    - n/a
+  foreignKeys:
+    - fields:
+        - neighbor_id
+      reference:
+        resource: ''
+        fields:
+          - id</code></pre>
+</div><ul>
+<li>Extrair dados</li>
+</ul>
+<div><pre><code class="language-python">from pprint import pprint
+from frictionless import extract
+
+tabela = extract('data/countries_v5.resource.yaml')
+pprint(tabela)
+</code></pre>
+
+<pre><code class="language-markup">[{'neighbor_id': None, 'id': 1, 'name': 'Britain', 'population': 67},
+ {'neighbor_id': 3, 'id': 2, 'name': 'France', 'population': None},
+ {'neighbor_id': 22, 'id': 3, 'name': 'Germany', 'population': 83},
+ {'neighbor_id': None, 'id': 4, 'name': 'Italy', 'population': 60},
+ {'neighbor_id': None, 'id': 5, 'name': None, 'population': None}]</code></pre>
+</div><ul>
+<li>Validar dados</li>
+</ul>
+<div><pre><code class="language-python">from pprint import pprint
+from frictionless import validate
+
+relatorio_validacao = validate('data/countries_v5.resource.yaml')
+pprint(relatorio_validacao.flatten(['rowNumber', 'fieldName', 'type']))
+</code></pre>
+
+<pre><code class="language-markup">[[3, 'neighbor_id', 'type-error'],
+ [4, '', 'extra-cell'],
+ [5, None, 'foreign-key'],
+ [7, 'neighbor_id', 'missing-cell'],
+ [7, 'name', 'missing-cell'],
+ [7, 'population', 'missing-cell']]</code></pre>
+</div><ol>
+<li>Para imprimir o relatório completo de validação, use apenas <code>pprint(relatorio_validacao</code>.</li>
+<li>A numeração de cada linha considera a contagem a partir da chave 'headerRows' da descrição (describe). Nesse caso, o 'headerRows' é 2, então a primeira linha de dados é 3.</li>
+</ol>
+<ul>
+<li>Transformar dados</li>
+</ul>
+<div><pre><code class="language-python">from pprint import pprint
+from frictionless import Resource, Pipeline, describe, transform, steps
+
+pipeline = Pipeline(steps=[
+    steps.cell_replace(field_name='neighbor_id', pattern='22', replace='2'),
+    steps.cell_replace(field_name='population', pattern='n/a', replace='67'),
+    steps.row_filter(formula='population'),
+    steps.field_update(name='neighbor_id', descriptor={"type": "integer"}),
+    steps.table_normalize(),
+    steps.table_write(path="data/countries-cleaned.csv"),
+])
+
+resource = Resource('data/countries.csv')
+target = resource.transform(pipeline)
+pprint(target.read_rows())
+</code></pre>
+
+<pre><code class="language-markup">[{'id': 1, 'neighbor_id': None, 'name': 'Britain', 'population': '67'},
+ {'id': 2, 'neighbor_id': 3, 'name': 'France', 'population': '67'},
+ {'id': 3, 'neighbor_id': 2, 'name': 'Germany', 'population': '83'},
+ {'id': 4, 'neighbor_id': None, 'name': 'Italy', 'population': '60'}]</code></pre>
 </div>
 
 <div id="livemark-signs">
   <div>
         <div class="next">
-      <a href="pages/remark.html">
-        Tipos possíveis de remark »
+      <a href="describe.html">
+        Descrever arquivo »
       </a>
     </div>
-          </div>
+            <div class="prev">
+      <a href="exemplo-inicial.html">
+        « Introdução
+      </a>
+    </div>
+      </div>
 </div>
 </div>
 <div id="livemark-right">
@@ -2925,41 +2017,10 @@ document.addEventListener("DOMContentLoaded", function(){
   </iframe>
 </div>
 
-<div id="livemark-about">
-  <div>
-    Livemark is a Python static site generator
+<div id="livemark-topics">
+  <div class="toc">
   </div>
 </div>
-
-<div id="livemark-links">
-  <ul>
-        <li>
-      <a href="https://frictionlessdata.io" target="_blank">
-        Frictionless
-      </a>
-    </li>
-        <li>
-      <a href="https://discord.com/channels/695635777199145130/695635777199145133" target="_blank">
-        Discord
-      </a>
-    </li>
-        <li>
-      <a href="https://twitter.com/frictionlessd8a" target="_blank">
-        Twitter
-      </a>
-    </li>
-        <li>
-      <a href="https://github.com/cecivieira/aprendendo-frictonless-data/issues" target="_blank">
-        Report
-      </a>
-    </li>
-        <li>
-      <a href="https://github.com/cecivieira/aprendendo-frictonless-data/fork" target="_blank">
-        Fork
-      </a>
-    </li>
-      
-</ul></div>
 </div>
 <script src="https://unpkg.com/lodash@4.17.21/lodash.min.js"></script>
 <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -3021,9 +2082,58 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 </script>
-<script src="https://unpkg.com/vega@5.20.2/build/vega.min.js"></script>
-<script src="https://unpkg.com/vega-lite@5.1.0/build/vega-lite.min.js"></script>
-<script src="https://unpkg.com/vega-embed@6.18.2/build/vega-embed.min.js"></script>
+<script src="https://unpkg.com/tocbot@4.12.3/dist/tocbot.min.js"></script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Start tocbot
+  tocbot.init({
+    // Where to render the table of contents.
+    tocSelector: ".toc",
+    // Where to grab the headings to build the table of contents.
+    contentSelector: "#livemark-main",
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: "h2, h3",
+    // For headings inside relative or absolute positioned containers within content.
+    hasInnerContainers: true,
+    // Called each time a heading is parsed. Expects a string in return.
+    headingLabelCallback: (label) => {
+      label = label.replace(/(^#|#$)/g, "").trim();
+      // label = label.replace(/\(.*?\)$/g, "");
+      return label;
+    },
+    // Disable generating ordered lists (ol)
+    orderedList: false,
+    // Fix active link class
+    onClick: syncList,
+    scrollEndCallback: syncList,
+  });
+
+  // Style list
+  $("#livemark-topics .toc > ul").addClass("primary");
+  $("#livemark-topics .toc > ul > li").addClass("primary");
+  $("#livemark-topics .toc > ul > li > a").addClass("primary");
+  $("#livemark-topics .toc ul.is-collapsible").addClass("secondary");
+  $("#livemark-topics .toc ul.is-collapsible li").addClass("secondary");
+  $("#livemark-topics .toc ul.is-collapsible li > a").addClass("secondary");
+  for (const element of $("#livemark-topics .primary")) {
+    if ($(element).find(".secondary").length) {
+      $(element).addClass("group");
+    }
+  }
+
+  // Sync list
+  function syncList() {
+    for (const element of $("#livemark-topics li.primary")) {
+      if ($(element).find(".is-active-li").length) {
+        $(element).addClass("is-active-li");
+      }
+    }
+  }
+  syncList();
+});
+
+</script>
 <script>
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -3250,73 +2360,73 @@ document.addEventListener("DOMContentLoaded", function () {
           'index': {
           'name': 'My Project',
           'path': 'index',
-          'relpath': 'index',
+          'relpath': '../../index',
           'text': "# My Project It will be great here ```html markup ``` Python task ```python task id=data-e print(\u0027Data Extract\u0027) ``` ```python task id=data-t print(\u0027Data Transform\u0027) ``` ```python task id=data-l print(\u0027Data Load\u0027) ``` As tasks servem para determinar funcionalidades. Para rodar uma task \u00e9 necess\u00e1rio inserir o seguinte trecho de c\u00f3digo: ``` \u0027\u0027\u0027bash script $ livemark run NOME-TASK \u0027\u0027\u0027 ``` Para listar todas as funcionalidades existentes, execute: ``` \u0027\u0027\u0027bash script $ livemark run \u0027\u0027\u0027 ``` Python script ```python script print(\"Hello World\") ``` ------------------- ```yaml chart data: url: data/cars.csv mark: circle selection: brush: type: interval encoding: x: type: quantitative field: kmpl scale: domain: [12,25] y: type: quantitative field: price scale: domain: [100,900] color: condition: selection: brush field: type type: nominal value: grey size: type: quantitative field: bhp width: 500 height: 300 ``` ## Tipos poss\u00edveis de remark ```markdown remark type=info Remark tipo info ``` ```markdown remark type=danger Remark tipo danger ``` ```markdown remark type=success Remark tipo success ``` ```markdown remark type=warning Remark tipo warning ``` ## Scroll infinito ```html markup 1 2 3 4 5 6 7 8 9 ``` ## Pagina\u00e7\u00e3o ```html markup 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 523 524 525 526 527 528 529 530 531 532 533 534 535 536 537 538 539 540 541 542 543 544 545 546 547 548 549 550 551 552 553 554 555 556 557 558 559 560 561 562 563 564 565 566 567 568 569 570 571 572 573 574 575 576 577 578 579 580 581 582 583 584 585 586 587 588 589 590 591 592 593 594 595 596 597 598 599 600 601 602 603 604 605 606 607 608 609 610 611 612 613 614 615 616 617 618 619 620 621 622 623 624 625 626 627 628 629 630 631 632 633 634 635 636 637 638 639 640 641 642 643 644 645 646 647 648 649 650 651 652 653 654 655 656 657 658 659 660 661 662 663 664 665 666 667 668 669 670 671 672 673 674 675 676 677 678 679 680 681 682 683 684 685 686 687 688 689 690 691 692 693 694 695 696 697 698 699 700 701 702 703 704 705 706 707 708 709 710 711 712 713 714 715 716 717 718 719 720 721 722 723 724 725 726 727 728 729 730 731 732 733 734 735 736 737 738 739 740 741 742 743 744 745 746 747 748 749 750 751 752 753 754 755 756 757 758 759 760 761 762 763 764 765 766 767 768 769 770 771 772 773 774 775 776 777 778 779 780 781 782 783 784 785 786 787 788 789 790 791 792 793 794 795 796 797 798 799 800 801 802 803 804 805 806 807 808 809 810 811 812 813 814 815 816 817 818 819 820 821 822 823 824 825 826 827 828 829 830 831 832 833 834 835 836 837 838 839 840 841 842 843 844 845 846 847 848 849 850 851 852 853 854 855 856 857 858 859 860 861 862 863 864 865 866 867 868 869 870 871 872 873 874 875 876 877 878 879 880 881 882 883 884 885 886 887 888 889 890 891 892 893 894 895 896 897 898 899 900 901 902 903 904 905 906 907 908 909 910 911 912 913 914 915 916 917 918 919 920 921 922 923 924 925 926 927 928 929 930 931 932 933 934 935 936 937 938 939 940 941 942 943 944 945 946 947 948 949 950 951 952 953 954 955 956 957 958 959 960 961 962 963 964 965 966 967 968 969 970 971 972 973 974 975 976 977 978 979 980 981 982 983 984 985 986 987 988 989 990 991 992 993 994 995 996 997 998 999 1000 ```",
       },
           'pages/remark': {
           'name': 'Tipos possíveis de remark',
           'path': 'pages/remark',
-          'relpath': 'pages/remark',
+          'relpath': '../remark',
           'text': "# Tipos poss\u00edveis de remark ```markdown remark type=info Remark tipo info ``` ```markdown remark type=danger Remark tipo danger ``` ```markdown remark type=success Remark tipo success ``` ```markdown remark type=warning Remark tipo warning ```",
       },
           'pages/graficos/grafico-1': {
           'name': 'Gráfico padrão',
           'path': 'pages/graficos/grafico-1',
-          'relpath': 'pages/graficos/grafico-1',
+          'relpath': '../graficos/grafico-1',
           'text': "# Gr\u00e1fico padr\u00e3o ```yaml chart data: url: ../../data/cars.csv mark: circle selection: brush: type: interval encoding: x: type: quantitative field: kmpl scale: domain: [12,25] y: type: quantitative field: price scale: domain: [100,900] color: condition: selection: brush field: type type: nominal value: grey size: type: quantitative field: bhp width: 500 height: 300 ```",
       },
           'pages/graficos/grafico-2': {
           'name': 'Gráfico modificado',
           'path': 'pages/graficos/grafico-2',
-          'relpath': 'pages/graficos/grafico-2',
+          'relpath': '../graficos/grafico-2',
           'text': "# Gr\u00e1fico modificado ```yaml chart data: url: ../../data/cars.csv mark: circle selection: brush: type: interval encoding: x: type: quantitative field: kmpl scale: domain: [12,25] y: type: quantitative field: price scale: domain: [100,900] color: condition: selection: brush field: type type: nominal value: red size: type: quantitative field: bhp width: 500 height: 300 ``` ## Cap\u00edtulo secund\u00e1rio 1 jahajhjha ## Cap\u00edtulo secund\u00e1rio 2 gagagaga ### Cap\u00edtulo terci\u00e1rio 1 hfytydyf ### Cap\u00edtulo terci\u00e1rio 2 hfytydyf",
       },
           'pages/frictionless_v4/exemplo-inicial': {
           'name': 'Exemplo inicial',
           'path': 'pages/frictionless_v4/exemplo-inicial',
-          'relpath': 'pages/frictionless_v4/exemplo-inicial',
+          'relpath': '../frictionless_v4/exemplo-inicial',
           'text': "# Exemplo inicial ## Abrir o arquivo ```python script with open(\u0027data/invalid.csv\u0027) as arquivo: print(arquivo.read()) ``` ## Descrever o arquivo ```python task id=data-describe from frictionless import describe resource = describe(\u0027data/invalid.csv\u0027) print(resource) ``` ```bash script livemark run data-describe ``` ## Extract ```python task id=data-extract from frictionless import extract from pprint import pprint rows = extract(\u0027data/invalid.csv\u0027) pprint(rows) ``` ```bash script livemark run data-extract ``` ## Validate ```python task id=data-validate from frictionless import validate from pprint import pprint report = validate(\u0027data/invalid.csv\u0027) flatten_2 = report.flatten([\"rowPosition\", \"fieldPosition\", \"code\"]) pprint(flatten_2) ``` ```bash script livemark run data-validate ```",
       },
           'pages/frictionless_v4/exemplos-basicos': {
           'name': 'Exemplos básicos',
           'path': 'pages/frictionless_v4/exemplos-basicos',
-          'relpath': 'pages/frictionless_v4/exemplos-basicos',
+          'relpath': '../frictionless_v4/exemplos-basicos',
           'text': "# Exemplos b\u00e1sicos ## Abrir arquivo ```python script with open(\u0027data/countries.csv\u0027) as paises: print(paises.read()) ``` ## Imprimir na tela o arquivo ```python script from pprint import pprint from frictionless import describe resource = describe(\u0027data/countries.csv\u0027) pprint(resource) ``` \u003c!-- ## Insere novos metadados no schema e corrige tipo de dado (ALTERAR PATH DO YAML PARA coutries.csv) ```python script from frictionless import Detector, describe detectar = Detector(field_missing_values=[\"\", \"n/a\"]) # informa quais os valores que o sistema deve interpretar como valor faltante resource = describe(\u0027data/countries.csv\u0027, detector=detectar) #aplica substitui\u00e7\u00e3o ao arquivo countries.csv resource.schema.get_field(\"neighbor_id\").type=\"integer\" #modifica tipo de dado da coluna neighbor_id para inteiro resource.schema.foreign_keys.append( {\"fields\": [\"neighbor_id\"], \"reference\": {\"resource\": \"\", \"fields\": [\"id\"]}} ) #cria v\u00ednculo entre colunas neighbor_id e id. Informando que neighbor_id \u00e9 chave estrangeira a qual sua refer\u00eancia \u00e9 a coluna id localizada no mesmo arquivo resource.to_yaml(\"data/countries.resource.yaml\") ``` --\u003e ```python script with open(\u0027data/countries.resource.yaml\u0027) as paises_yaml: print(paises_yaml.read()) ``` # Extrair dados usando os metadados corrigidos ```python script from pprint import pprint from frictionless import extract pasta = \u0027data\u0027 rows = extract(f\u0027{pasta}/countries.resource.yaml\u0027) #caminho completo do arquivo pprint(rows) ``` # Validar dados ```python script from pprint import pprint from frictionless import validate pasta = \u0027data\u0027 report = validate(f\u0027{pasta}/countries.resource.yaml\u0027) #caminho completo do arquivo pprint(report.flatten([\"rowPosition\", \"fieldPosition\", \"code\"])) ``` # Transformar dados ```python script # from frictionless import Resource, describe, transform, steps # def clean(resource): # current = resource.to_copy() # # Data # def data(): # with current: # for row in current.row_stream: # if row[\"name\"] == \"France\": # row[\"population\"] = 67 # if row[\"name\"] == \"Germany\": # row[\"neighbor_id\"] = 2 # if row[\"name\"]: # yield row # # Meta # pasta = \u0027data\u0027 # resource.schema = Resource(f\u0027{pasta}/countries.resource.yaml\u0027).schema #caminho completo do arquivo # resource.data = data # source = describe(\"data/countries.csv\") # target = transform( # source, # steps=[ # clean, # steps.table_write(path=\"data/countries.csv\"), # ], # ) # # Exibir o arquivo transformado # with open(\u0027data/countries.csv\u0027) as file: # print(file.read()) ``` ## Listar arquivos e metadados pertencentes ao conjunto de dados que acabamos o pr\u00e9-processamento Esse trecho de c\u00f3digo n\u00e3o est\u00e1 com o comportamento esperado. \u00c9 necess\u00e1rio ler a documenta\u00e7\u00e3o da biblioteca OS, identificar a fun\u00e7\u00e3o a qual aceite como argumento o caminho da pasta data e aplique na pasta o filtro desejado (nesse caso o filtro \u00e9 \"retornar todos os arquivos come\u00e7ados com countries.\"). ```python script import os pasta2 = \u0027data/\u0027 files = [f for f in os.listdir(pasta2) if os.path.isfile(f\u0027{pasta2}{f}\u0027) and f.startswith(\u0027countries.\u0027)] print(files) ```",
       },
           'pages/frictionless_v5/exemplo-inicial': {
           'name': 'Introdução',
           'path': 'pages/frictionless_v5/exemplo-inicial',
-          'relpath': 'pages/frictionless_v5/exemplo-inicial',
+          'relpath': 'exemplo-inicial',
           'text': "# Introdu\u00e7\u00e3o ```bash script frictionless validate data/invalid.csv ``` # Atualiza\u00e7\u00e3o de vers\u00e3o Para atualizar a vers\u00e3o do frictionless, rode o seguinte comando: \u0027\u0027\u0027 pip install --upgrade frictionless \u0027\u0027\u0027 # Uso Extra\u00e7\u00e3o de dados - exemplo inicial ```python script from frictionless import extract from pprint import pprint rows = extract(\u0027data/invalid.csv\u0027) pprint(rows) ``` Impress\u00e3o do arquivo na tela ```python script with open(\u0027data/invalid.csv\u0027) as file: print(file.read()) ``` Describe - exemplo inicial ```python script from frictionless import describe from pprint import pprint resource = describe(\u0027data/invalid.csv\u0027) pprint(resource) ``` Extract - exemplo inicial ```python script from frictionless import extract from pprint import pprint resource = extract(\u0027data/invalid.csv\u0027) pprint(resource) ``` Validate - exemplo inicial ```python script from frictionless import validate from pprint import pprint resource = validate(\u0027data/invalid.csv\u0027) pprint(resource.flatten([\u0027rowNumber\u0027, \u0027fieldNumber\u0027, \u0027type\u0027])) ```",
       },
           'pages/frictionless_v5/exemplo-basico': {
           'name': 'Exemplos básicos ',
           'path': 'pages/frictionless_v5/exemplo-basico',
-          'relpath': 'pages/frictionless_v5/exemplo-basico',
+          'relpath': 'exemplo-basico',
           'text': "# Exemplos b\u00e1sicos ([link para cap\u00edtulo do Manual](https://framework.frictionlessdata.io/docs/basic-examples.html)) - Abrir arquivo ```python script with open(\u0027data/countries.csv\u0027) as arquivo: print(arquivo.read()) ``` - Descrever o arquivo (descri\u00e7\u00e3o autom\u00e1tica) ```python script from pprint import pprint from frictionless import describe recurso = describe(\u0027data/countries.csv\u0027) pprint(recurso) ``` - Atualizar metadados do arquivo ```python script from frictionless import Detector, describe deteccao_valor_ausentes = Detector(field_missing_values = [\u0027\u0027, \u0027n/a\u0027]) recurso = describe(\u0027data/countries.csv\u0027, detector=deteccao_valor_ausentes) recurso.schema.get_field(\u0027neighbor_id\u0027).type = \u0027integer\u0027 recurso.schema.foreign_keys.append( {\"fields\": [\"neighbor_id\"], \"reference\": {\"resource\": \"\", \"fields\": [\"id\"]}} ) recurso.path = \u0027countries.csv\u0027 # corrige path do arquivo csv. Originalmente \u00e9 gerado um path do caminho relativo \u00e0 pasta raiz. A altera\u00e7\u00e3o \u00e9 necess\u00e1ria porque quando o arquivo de metadados e dados est\u00e3o na mesma pasta, o caminho deveria ser relativo \u00e0 pasta atual. recurso.to_yaml(\u0027data/countries_v5.resource.yaml\u0027) ``` ```python script with open(\u0027data/countries_v5.resource.yaml\u0027) as arquivo: print(arquivo.read()) ``` - Extrair dados ```python script from pprint import pprint from frictionless import extract tabela = extract(\u0027data/countries_v5.resource.yaml\u0027) pprint(tabela) ``` - Validar dados ```python script from pprint import pprint from frictionless import validate relatorio_validacao = validate(\u0027data/countries_v5.resource.yaml\u0027) pprint(relatorio_validacao.flatten([\u0027rowNumber\u0027, \u0027fieldName\u0027, \u0027type\u0027])) ``` 1. Para imprimir o relat\u00f3rio completo de valida\u00e7\u00e3o, use apenas `pprint(relatorio_validacao`. 1. A numera\u00e7\u00e3o de cada linha considera a contagem a partir da chave \u0027headerRows\u0027 da descri\u00e7\u00e3o (describe). Nesse caso, o \u0027headerRows\u0027 \u00e9 2, ent\u00e3o a primeira linha de dados \u00e9 3. - Transformar dados ```python script from pprint import pprint from frictionless import Resource, Pipeline, describe, transform, steps pipeline = Pipeline(steps=[ steps.cell_replace(field_name=\u0027neighbor_id\u0027, pattern=\u002722\u0027, replace=\u00272\u0027), steps.cell_replace(field_name=\u0027population\u0027, pattern=\u0027n/a\u0027, replace=\u002767\u0027), steps.row_filter(formula=\u0027population\u0027), steps.field_update(name=\u0027neighbor_id\u0027, descriptor={\"type\": \"integer\"}), steps.table_normalize(), steps.table_write(path=\"data/countries-cleaned.csv\"), ]) resource = Resource(\u0027data/countries.csv\u0027) target = resource.transform(pipeline) pprint(target.read_rows()) ```",
       },
           'pages/frictionless_v5/describe': {
           'name': 'Descrever arquivo',
           'path': 'pages/frictionless_v5/describe',
-          'relpath': 'pages/frictionless_v5/describe',
+          'relpath': 'describe',
           'text': "# Descrever arquivo [link para o cap\u00edtulo](https://framework.frictionlessdata.io/docs/guides/describing-data.html) Exemplo gen\u00e9rico ```python script from frictionless import describe package = describe(\"data/table.csv\", type=\"package\") print(package.to_yaml()) ``` The frictionless framework provides 4 different describe functions in Python: - describe: detects the source type and returns Data Resource or Data Package metadata - Schema.describe: always returns Table Schema metadata - Resource.describe: always returns Data Resource metadata - Package.describe: always returns Data Package metadata ## Describe Schema ```python script with open(\u0027data/country-1.csv\u0027) as arquivo: print(arquivo.read()) ``` Criando a descri\u00e7\u00e3o do tipo \"Schema.describe\", que descreve a estrutura da tabela, ou seja, se houverem v\u00e1rias tabelas com a mesa estrutura o mesmo describe schema deve represent\u00e1-las. ```python script from frictionless import Schema schema = Schema.describe(\u0027data/country-1.csv\u0027) schema.to_yaml(\u0027data/country-1.schema.yaml\u0027) ``` ```python script with open(\u0027data/country-1.schema.yaml\u0027) as arquivo: print(arquivo.read()) ``` Editar metadados do schema da tabela: ```python script from frictionless import Schema schema = Schema.describe(\"data/country-1.csv\") schema.get_field(\"id\").title = \"Identifier\" schema.get_field(\"neighbor_id\").title = \"Identifier of the neighbor\" schema.get_field(\"name\").title = \"Name of the country\" schema.get_field(\"population\").title = \"Population\" schema.get_field(\"population\").description = \"According to the year 2020\u0027s data\" schema.get_field(\"population\").constraints[\"minimum\"] = 0 #estabelece valor m\u00ednimo para a coluna \"population\" schema.foreign_keys.append( {\"fields\": [\"neighbor_id\"], \"reference\": {\"resource\": \"\", \"fields\": [\"id\"]}} ) #insere rela\u00e7\u00e3o entre colunas (chave estrangeira do id) schema.to_yaml(\"data/country-1.schema-full.yaml\") ``` ```python script with open(\u0027data/country-1.schema-full.yaml\u0027) as arquivo: print(arquivo.read()) ``` ## Describing resource Descreve um arquivo, e apenas 1, arquivo de dados. Retorna informa\u00e7\u00f5es como encoding, extens\u00e3o do arquivo e referencia o schema da tabela. ```python script with open(\u0027data/country-2.csv\u0027) as file: print(file.read()) ``` Descrevendo o arquivo original. Metadados n\u00e3o refinados ```python script from frictionless import describe resource = describe(\u0027data/country-2.csv\u0027) print(resource.to_yaml()) ``` Ajustando os metadados ```python script # from frictionless import Schema, describe # resource = describe(\"data/country-2.csv\") # resource.dialect.header_rows = [2] #estabelece a linha da tabela que possui o header, ou seja, ignora coment\u00e1rios que possam existir em linhas anteriores ao in\u00edcio da tabela # resource.dialect.get_control(\u0027csv\u0027).delimiter = \";\" #explicita delimitador # resource.schema = \"data/country-1.schema-full.yaml\" #ATEN\u00c7\u00c3O: essa refer\u00eancia \u00e9 um ponto cr\u00edtico, pois o caminho relativo correto seria \"country-1.schema-full.yaml\", no entanto no ato da atribui\u00e7\u00e3o n\u00e3o \u00e9 poss\u00edvel faz\u00ea-lo porque d\u00e1 erro quando n\u00e3o \u00e9 passado o caminho relativo \u00e0 pasta raiz. No entanto, no ato do uso do metadado para transforma\u00e7\u00e3o, d\u00e1 erro porque o caminho relativo est\u00e1 em rela\u00e7\u00e3o \u00e0 raiz e n\u00e3o ao arquivo que est\u00e1 chamando o metadado # resource.path = \"country-2.csv\" # resource.to_yaml(\"data/country-2.resource-cleaned.yaml\") ``` Metadados refinados ```python script with open(\u0027data/country-2.resource-cleaned.yaml\u0027) as file: print(file.read()) ``` ## Describing Package Essa descri\u00e7\u00e3o engloba todo o conjunto de dados, que pode ter mais de um arquivo. No exemplo abaixo, usarei 2 arquivos: pa\u00edses e capitais. ```python script with open(\u0027data/country-3.csv\u0027) as file: print(file.read()) ``` ```python script with open(\u0027data/capital-3.csv\u0027) as file: print(file.read()) ``` Descrevendo conjunto de dados com v\u00e1rios arquivos ```python script from frictionless import describe package = describe(\"data/*-3.csv\") print(package.to_yaml()) ``` Refinando os metadados do conjunto de dados ```python script from frictionless import describe package = describe(\"data/*-3.csv\") package.title = \"Countries and their capitals\" package.description = \"The data was collected as a research project\" package.get_resource(\"country-3\").name = \"country\" # o m\u00f3dulo get_resource recebe como argumento a propriedade \"name\" do describe do recurso package.get_resource(\"capital-3\").name = \"capital\" # o m\u00f3dulo get_resource recebe como argumento a propriedade \"name\" do describe do recurso # Insere metadados do schema do recurso \"country\" package.get_resource(\"country\").schema.foreign_keys.append( {\"fields\": [\"capital_id\"], \"reference\": {\"resource\": \"capital\", \"fields\": [\"id\"]}} ) #observar que nessa rela\u00e7\u00e3o, a chave \"resource\" n\u00e3o est\u00e1 vazia, isso porque est\u00e1 criando rela\u00e7\u00e3o com coluna de outra tabela package.get_resource(\"country\").schema.get_field(\"id\").title = \"Identifier\" package.get_resource(\"country\").schema.get_field(\"name\").title = \"Name of the country\" package.get_resource(\"country\").schema.get_field(\"population\").title = \"Population\" package.get_resource(\"country\").schema.get_field(\"population\").description = \"According to the year 2020\u0027s data\" package.get_resource(\"country\").schema.get_field(\"population\").constraints[\"minimum\"] = 0 #estabelece valor m\u00ednimo para a coluna \"population\" package.to_yaml(\"data/country-3.package.yaml\") ``` Metadados j\u00e1 refinados ```python script with open(\u0027data/country-3.package.yaml\u0027) as file: print(file.read()) ``` ```markdown remark type=warning A partir daqui as explica\u00e7\u00f5es s\u00e3o apenas um aprofundamento do que j\u00e1 foi estudado at\u00e9 aqui. Explica como funciona o m\u00e9todo \"describe\" no baixo n\u00edvel. ``` ## Metadata Importance Without metadata many software will not be able to even read this data file. Furthermore, without metadata people cannot understand the purpose of this data. We can export and share this data without any worries. ## Inferring Metadata Many Frictionless functions infer metadata under the hood such as describe, extract, etc. To see this, let\u0027s create a Resource. ```python script from frictionless import Resource resource = Resource(\"data/country-1.csv\") print(resource) ``` Infer metadata ```python script from frictionless import Resource resource = Resource(\"data/country-1.csv\") resource.infer(stats=True) print(resource) ``` Package infer ```python script from frictionless import describe resource = describe(\"data/*-3.csv\") resource.infer() print(resource) ``` Resource infer ```python script from pprint import pprint from frictionless import describe resource = describe(\"data/country-1.csv\") resource.infer() pprint(resource) ``` ## Validating Metadata ```python script import yaml from frictionless import Resource descriptor = {} descriptor[\u0027path\u0027] = \u0027data/country-1.csv\u0027 descriptor[\u0027title\u0027] = 1 try: Resource(descriptor) except Exception as exception: print(exception.error) print(exception.reasons) ``` ## Transforming Metadata ```python script from frictionless import Resource resource = Resource(\"data/country-2.resource-cleaned.yaml\") resource.title = \"Countries\" resource.description = \"It\u0027s a research project\" resource.dialect.header_rows = [2] resource.dialect.get_control(\u0027csv\u0027).delimiter = \";\" # Adiciona propriedades customizadas na descri\u00e7\u00e3o do recurso de dados resource.custom[\"customKey1\"] = \"Value1\" resource.custom[\"customKey2\"] = \"Value2\" resource.to_yaml(\"data/country-2.resource-updated.yaml\") ``` ```python script with open(\u0027data/country-2.resource-updated.yaml\u0027) as file: print(file.read()) ```",
       },
           'pages/frictionless_v5/validate': {
           'name': 'Validating',
           'path': 'pages/frictionless_v5/validate',
-          'relpath': 'pages/frictionless_v5/validate',
+          'relpath': 'validate',
           'text': "# Validating",
       },
           'blog/index': {
           'name': 'Sumário',
           'path': 'blog/index',
-          'relpath': 'blog/index',
+          'relpath': '../../blog/index',
           'text': "# Sum\u00e1rio - [Artigo 1](blog/2021-09-01-article.md)",
       },
           'blog/2021-09-01-article': {
           'name': 'Título Blog',
           'path': 'blog/2021-09-01-article',
-          'relpath': 'blog/2021-09-01-article',
+          'relpath': '../../blog/2021-09-01-article',
           'text': "# T\u00edtulo Blog fafafaffafafafaf",
       },
       };

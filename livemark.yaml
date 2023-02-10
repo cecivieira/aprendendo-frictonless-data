@@ -21,6 +21,9 @@ pages:
     - name: Frictonless V5
       items:
         - path: pages/frictionless_v5/exemplo-inicial
+        - path: pages/frictionless_v5/exemplo-basico
+        - path: pages/frictionless_v5/describe
+        - path: pages/frictionless_v5/validate
     - name: Blog
       path: blog/index
 links:

@@ -15,6 +15,7 @@ pip install --upgrade frictionless
 # Uso
 
 Extração de dados - exemplo inicial
+
 ```python script
 from frictionless import extract
 from pprint import pprint
@@ -40,6 +41,7 @@ pprint(resource)
 ```
 
 Extract - exemplo inicial
+
 ```python script
 from frictionless import extract
 from pprint import pprint
@@ -49,6 +51,7 @@ pprint(resource)
 ```
 
 Validate - exemplo inicial
+
 ```python script
 from frictionless import validate
 from pprint import pprint
